@@ -141,4 +141,6 @@ Extensions
 
     Notes
     https://devblogs.microsoft.com/python/agentshack-python/
-    
+
+    Teams ToolKit Examples
+    https://github.com/OfficeDev/Teams-Toolkit-Samples
