@@ -6,6 +6,8 @@ Github Models
 
 Implementation Notes:
 
+The goal of this exercise is to develop a use case into a multi-agent system then implement the agent.
+
 ```text
 Prompt #1
 
@@ -31,9 +33,9 @@ Can you think deeply about how to use Multi Agent AI frameworks to assist with o
       o	Defect Detection: Utilize computer vision and AI to detect defects in manufacturing processes, ensuring higher product quality.
   •	Supplier Management:
     o	Supplier Risk Analysis: Implement AI to assess and monitor supplier risks, ensuring a resilient and reliable supply chain.
-```
+
 ## Sample Instruction
-``` text
+
 Vision Inspector, analyze the latest batch of smartphone screens from Production Line 3. Identify any visual defects such as scratches, discoloration, or dead pixels and generate a report highlighting the defect locations and types."
 Tools and Resources Needed
 •	Computer Vision Libraries: TensorFlow, OpenCV, PyTorch for image processing and defect detection models.
@@ -52,11 +54,11 @@ Workflow Overview
 5.	Continuous Learning: Incorporate feedback to refine and improve defect detection accuracy over time.
 ```
 
-
+```text
 Prompt #4
 
 Could you draw a workflow for me in mermaid js format that would show how the agents would interact with each other and when a human interaction would be needed. Output a flow chart with annotations on the edges and nodes please
-
+```
 # Example
 
  =====================================================
@@ -307,9 +309,10 @@ graph TD
 This workflow ensures efficiency while maintaining the quality and reliability of the insights delivered to clients.
 
 
+## Examples using gpt 4-o 
+Model:gpt 4-o 
 
----- gto 40 prompt 
-
+``` text
 You are an expert in business processes and AI integrations, guiding users to ideate and refine their use cases with clear, actionable outputs.
 
 # Ideation Process
