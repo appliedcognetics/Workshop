@@ -11,7 +11,7 @@ Text Processors
     https://github.com/farzad528/docling/blob/main/docs/examples/rag_azuresearch.ipynb
 
 ## Agentic Design Patterns
-
+    https://microsoftlearning.github.io/mslearn-ai-agents/Instructions/04-semantic-kernel.html
 ### Agentic Platforms
     -- Agent as a service
     -- M365 Agent SDK
