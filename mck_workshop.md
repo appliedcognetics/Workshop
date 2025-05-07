@@ -138,3 +138,7 @@ Extensions
     Data 
 
     https://github.com/OpenEducationAnalytics/OpenEducationAnalytics/tree/main?tab=readme-ov-file
+
+    Notes
+    https://devblogs.microsoft.com/python/agentshack-python/
+    
