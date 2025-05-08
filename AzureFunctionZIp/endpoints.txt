@@ -1,0 +1,14 @@
+ mock_book_service: https://mckworking.azurewebsites.net/api/mock/book_service
+  mock_create_request: https://mckworking.azurewebsites.net/api/mock/create_request
+  mock_create_ticket: https://mckworking.azurewebsites.net/api/mock/create_ticket
+  mock_get_request_by_highest_priority: https://mckworking.azurewebsites.net/api/mock/get_request_by_highest_priority
+  mock_get_slack_messages: https://mckworking.azurewebsites.net/api/mock/get_slack_messages
+  mock_get_todo_tasks: https://mckworking.azurewebsites.net/api/mock/get_todo_tasks
+  mock_get_unread_emails: https://mckworking.azurewebsites.net/api/mock/get_unread_emails
+  mock_http_trigger: https://mckworking.azurewebsites.net/api/mock/customer_product
+  mock_reserve_table: https://mckworking.azurewebsites.net/api/mock/reserve_table
+  mock_restaurant_availability: https://mckworking.azurewebsites.net/api/mock/restaurant_availability
+  mock_retrieve_inventory: https://mckworking.azurewebsites.net/api/mock/retrieve_inventory
+  mock_schedule_property_tour: https://mckworking.azurewebsites.net/api/mock/schedule_property_tour
+  mock_search_recipes: https://mckworking.azurewebsites.net/api/mock/search_recipes
+  mock_services_availability: https://mckworking.azurewebsites.net/api/mock/services_availability
