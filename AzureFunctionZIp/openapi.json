@@ -1,0 +1,293 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Restaurant Reservation API",
+      "description": "API for making restaurant reservations",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://mckworking.azurewebsites.net/api"
+      }
+    ],
+    "paths": {
+      "/mock/reserve_table": {
+        "get": {
+          "summary": "Reserve a table at a restaurant",
+          "description": "Creates a reservation for a table based on requested parameters",
+          "operationId": "reserveTable",
+          "parameters": [
+            {
+              "name": "restaurantId",
+              "in": "query",
+              "description": "Unique identifier for the restaurant",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "uuid"
+              }
+            },
+            {
+              "name": "desiredDateTime",
+              "in": "query",
+              "description": "Date and time for the reservation",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            {
+              "name": "numGuests",
+              "in": "query",
+              "description": "Number of guests for the reservation",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful operation",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReservationConfirmation"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "summary": "Reserve a table at a restaurant",
+          "description": "Creates a reservation for a table based on requested parameters",
+          "operationId": "reserveTablePost",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "restaurantId",
+                    "desiredDateTime",
+                    "numGuests"
+                  ],
+                  "properties": {
+                    "restaurantId": {
+                      "type": "string",
+                      "format": "uuid",
+                      "description": "Unique identifier for the restaurant"
+                    },
+                    "desiredDateTime": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "Date and time for the reservation"
+                    },
+                    "numGuests": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "description": "Number of guests for the reservation"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Successful operation",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReservationConfirmation"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/mock/restaurant_availability": {
+        "get": {
+          "summary": "Get restaurant availability",
+          "description": "Returns a list of available restaurants with their details",
+          "operationId": "getRestaurantAvailability",
+          "parameters": [
+            {
+              "name": "location",
+              "in": "query",
+              "description": "Location in latitude,longitude format",
+              "required": false,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "cuisine",
+              "in": "query",
+              "description": "Type of cuisine",
+              "required": false,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "desiredDateTime",
+              "in": "query",
+              "description": "Desired date and time for reservation",
+              "required": false,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "numGuests",
+              "in": "query",
+              "description": "Number of guests",
+              "required": false,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful operation",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Restaurant"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "summary": "Get restaurant availability",
+          "description": "Returns a list of available restaurants with their details",
+          "operationId": "getRestaurantAvailabilityPost",
+          "requestBody": {
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "location": {
+                      "type": "string",
+                      "description": "Location in latitude,longitude format"
+                    },
+                    "cuisine": {
+                      "type": "string",
+                      "description": "Type of cuisine"
+                    },
+                    "desiredDateTime": {
+                      "type": "string",
+                      "description": "Desired date and time for reservation"
+                    },
+                    "numGuests": {
+                      "type": "string",
+                      "description": "Number of guests"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Successful operation",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Restaurant"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "ReservationConfirmation": {
+          "type": "object",
+          "properties": {
+            "reservation_id": {
+              "type": "string",
+              "format": "uuid",
+              "description": "Unique identifier for the reservation"
+            },
+            "restaurant_name": {
+              "type": "string",
+              "description": "Name of the restaurant"
+            },
+            "reservation_time": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Confirmed date and time for the reservation"
+            },
+            "num_guests": {
+              "type": "integer",
+              "description": "Number of guests for the reservation"
+            },
+            "confirmation_message": {
+              "type": "string",
+              "description": "Confirmation message for the reservation"
+            }
+          },
+          "required": [
+            "reservation_id",
+            "restaurant_name",
+            "reservation_time",
+            "num_guests",
+            "confirmation_message"
+          ]
+        },
+        "Restaurant": {
+          "type": "object",
+          "properties": {
+            "resturant_id": {
+              "type": "string",
+              "description": "Unique identifier for the restaurant"
+            },
+            "name": {
+              "type": "string",
+              "description": "Name of the restaurant"
+            },
+            "rating": {
+              "type": "integer",
+              "description": "Rating of the restaurant on a 5-star scale"
+            },
+            "address": {
+              "type": "string",
+              "description": "Physical address of the restaurant"
+            },
+            "contact_number": {
+              "type": "string",
+              "description": "Contact phone number for the restaurant"
+            },
+            "available_times": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "List of available reservation times"
+            }
+          }
+        }
+      }
+    }
+  }
