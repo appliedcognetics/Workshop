@@ -4,6 +4,93 @@ Ideate an Agentic System with AI
 Tools:
 Github Models
 
+---
+
+V2
+
+Notes: Think about limiting the number of agents to 3 or 4.
+It didnt understand what and agentic system was be more explict , about using artifical intelligece agents to solve a business problem.
+Understand where opertional efficiency can be achieved with the use of AI agents.
+Understand the capabilities of the organization that will be implementing the system and the tools that they have available to them. These should be listed in the input
+  Examples of tools and data:
+    - The data catalog and business glossary that the organization has available to them.
+    - Documentation on the business process flows
+    - Understand the line of business systems that I might need to access to get the data I need for the use case.
+
+
+
+```text
+I want to develop and agentic system for a client in health and life sciences to stream line its revenue cycle management, take a operation like Accounts Receivable and , I also need to understand the tools and data that I might need for this process so I can create the endpoints and get access to the data. 
+
+These are the results that I need :
+- Understanding of the line of business systems that I might need to access to get the data I need for the use case.
+- the actions that the agents would need to take to achieve the business outcome.
+- How the human would interact with the system and when they would need to be involved in the process.
+- An outline on how to think about the process flow from a business and technical perspective focused on achieving a business outcome.
+- An outline of key value propositions for the use case and the business outcome
+- A mermaid js diagram that visualized the process flow , dont include an parenthesis in the node or edge names or the diagram will not render.
+
+
+I want to use the latest tools and techniques to develop the use case. The result will be an agentic system that addresses the use case developed in various technologies. The purpose of the workshop is to understand how to decompose use cases into a set of tools, tasks, triggers, and actions and express the system with technology to achieve a business outcome. The workshop will use the latest tools and techniques to develop the use cases. The results will then be expressed in the technology of the stakeholders' choice.
+
+I want to develop and agentic system for a client in health and life sciences to stream line its revenue cycle management, take a operation like Accounts Receivable and give me thoughts on how to think about the process flow and a mermaid diagram that I could visualize , I also need to understand the tools and data that I might need for this process so I can create the endpoints and get access to the data
+```
+
+#2 
+consider the use case and use best practices to ideate about the ling of business applications the sector might use
+
+#3 work to refine the output of the use case
+
+Consider the use case of I am a seller that has 100 accounts across 
+----
+# O3 Model Dialog
+
+1) I want to develop and agentic system for a client in health and life sciences to stream line its revenue cycle management, take a operation like Accounts Receivable and , I also need to understand the tools and data that I might need for this process so I can create the endpoints and get access to the data. 
+
+These are the results that I need :
+- Understanding of the line of business systems that I might need to access to get the data I need for the use case.
+- the actions that the agents would need to take to achieve the business outcome.
+- How the human would interact with the system and when they would need to be involved in the process.
+- An outline on how to think about the process flow from a business and technical perspective focused on achieving a business outcome.
+- An outline of key value propositions for the use case and the business outcome
+- A mermaid js diagram that visualized the process flow , dont include an parenthesis in the node or edge names or the diagram will not render.
+
+2) this is great I need more detail in the diagram about the different tools or systems the specific agent might interact with
+
+3) the diagram is not clear on the starting point can you help me with that ?
+
+4) we need some labels on the edges about what is happening between the nodes also provide a write up about the process
+
+## Improving the Prompt Button
+
+Make the system prompt more, clear with proper steps and guidance for the model
+
+``` text 
+Result
+You assist in transforming business requirements into well-defined business use cases for a multi-agent AI system. Your goal is to help users achieve their desired business outcomes by providing clear guidance, asking follow-up questions if needed, and suggesting actionable next steps. Follow these instructions for delivering effective support:
+
+1. **Understand the Scenario**: Carefully analyze the user's input to comprehend the business context, objectives, and requirements.
+
+2. **Clarify with Questions**: If the user's goals or requirements are unclear, ask specific and concise follow-up questions to gather the necessary details.
+
+3. **Develop Ideas into Use Cases**: Help the user refine their ideas into structured business use cases by identifying key components such as objectives, stakeholders, tools, data requirements, and processes.
+
+4. **Provide Tools and Resources**: Offer suggestions on tools, datasets, or frameworks that can enhance the implementation of the use case.
+
+5. **Define Process Flow**: Create a high-level process flow or outline that the user can follow to achieve their objectives.
+
+6. **Ensure Alignment with Goals**: Continuously align suggestions with the user's business goals to maximize relevance and effectiveness.
+
+7. **Iterate and Refine**: If the user provides feedback, use it to refine the suggestions and ensure they are tailored to the user's needs and constraints.
+
+8. ** Mermaid Diagrams** : If the user requests a mermaid diagram ensure to not use parenthesis () in the nodes and edges so that the mermaid will render properly
+
+Maintain concise, actionable, and technically feasible guidance throughout the interaction. Optimize for clarity and ensure the user feels supported in achieving their objectives.
+
+```
+-----
+
+
 Implementation Notes:
 
 The goal of this exercise is to develop a use case into a multi-agent system then implement the agent.
